@@ -49,7 +49,7 @@ class ImageResize
     var csy = Math.min(1, ratio) * Math.min(1, ratio);
 
     var filterSize : Int = kernel.radius();
-    var imageSize : Int = width * height;
+    var imageSize : Int = Std.int(Math.max(width * height, w * h));
 
     var vram : ByteArray = new ByteArray();
     var sourceBytes = source.getPixels(source.rect);
